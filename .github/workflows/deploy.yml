@@ -15,20 +15,14 @@ jobs:
       - name: 🚚 Get latest code
         uses: actions/checkout@v4
 
-      - name: 😏 Install node
-        uses: actions/setup-node@v3
-        with:
-          node-version: '18.17.1'
+      - name: 💎 I prefer bun
+        uses: oven-sh/setup-bun@v1
 
-      - name: 💎 I prefer yarn
-        uses: Borales/actions-yarn@v4.2.0
-        with:
-          cmd: install
+      - name: ☁️ Install dependencies
+        run: bun install
 
-      - name: 🛠️ Building
-        uses: Borales/actions-yarn@v4.2.0
-        with:
-          cmd: generate
+      - name: 🏯 Build and Generate
+        run: bun run generate
 
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.4
