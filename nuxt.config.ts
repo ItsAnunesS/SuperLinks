@@ -42,9 +42,29 @@ export default defineNuxtConfig({
   ],
   devtools: { enabled: true },
   i18n: {
+    defaultLocale: 'en',
+    detectBrowserLanguage: {
+      alwaysRedirect: false,
+      fallbackLocale: '',
+      redirectOn: 'root',
+      useCookie: true,
+      cookieCrossOrigin: true,
+      cookieDomain: 'anuness.dev',
+      cookieSecure: true,
+      cookieKey: 'anuness_i18n_redirected'
+    },
+    strategy: 'no_prefix',
+    vueI18n: './config/i18n.config.ts',
+    langDir: './locales/',
+    lazy: true,
+    locales: [
+      { file: 'en.json', code: 'en', iso: 'en-US', name: 'English' },
+      { file: 'pt.json', code: 'pt', iso: 'pt-BR', name: 'Português' },
+    ],
+    experimental: {
+    }
   },
   tailwindcss: {
-    cssPath: '~/assets/css/tailwind.css',
     configPath: '~/config/tailwind.config',
     viewer: true,
   },
