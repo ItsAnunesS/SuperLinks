@@ -1,5 +1,42 @@
 <script setup lang="ts">
-const { t } = useI18n();
+const { t, locale } = useI18n();
+
+useSeoMeta({
+  title: computed(() => t('app.title')),
+  description: computed(() => t('app.description')),
+  keywords: computed(() => t('app.keywords')),
+  robots: 'index,follow',
+  ogTitle: computed(() => t('app.title')),
+  ogDescription: computed(() => t('app.description')),
+  ogImage: 'https://links.anuness.dev/images/seo.jpg',
+  ogUrl: useRuntimeConfig().SITE_URL as string,
+  ogLocale: locale,
+  twitterCard: 'summary_large_image',
+  twitterSite: '@ItsAnunesS',
+  twitterTitle: computed(() => t('app.title')),
+  twitterDescription: computed(() => t('app.description')),
+  twitterCreator: '@ItsAnunesS',
+  twitterImage: 'https://links.anuness.dev/images/seo.jpg',
+});
+
+useHeadSafe({
+  meta: [
+    {
+      id: 'contact',
+      name: 'contact',
+      content: 'hello@anuness.dev'
+    },
+    {
+      'http-equiv': 'Content-Type',
+      content: 'text/html; charset=utf-8'
+    },
+    {
+      id: 'revisit-after',
+      name: 'revisit-after',
+      content: '1'
+    }
+  ]
+});
 
 // TODO: Add integration with backend
 const general: LinksInterface[] = [

@@ -4,6 +4,7 @@ const { t } = useI18n();
 useSchemaOrg([
   definePerson({
     name: t('app.name'),
+    description: t('app.description'),
     image: '/favicon/favicon-32x32.png',
     sameAs: [
       'https://github.com/ItsAnunesS',
@@ -16,7 +17,12 @@ useSchemaOrg([
       'https://www.youtube.com/@ItsAnunesSXP',
     ]
   }),
-  defineWebSite({}),
+  defineWebSite({
+    name: t('app.name'),
+    description: t('app.description'),
+    url: 'https://anuness.dev',
+    image: '/favicon/favicon-32x32.png',
+  }),
   defineWebPage(),
 ]);
 
@@ -38,14 +44,11 @@ const head = useLocaleHead({
   identifierAttribute: 'id',
   addSeoAttributes: true
 });
-
-const title = computed(() => t('app.title'));
 </script>
 
 <template>
   <Html :data-theme="useThemeState().currentTheme" :lang="head.htmlAttrs?.lang" :dir="head.htmlAttrs?.dir">
     <Head>
-      <Title>{{ title }}</Title>
       <template v-for="link in head.link" :key="link.id">
         <Link :id="link.id" :rel="link.rel" :href="link.href" :hreflang="link.hreflang" />
       </template>
@@ -59,6 +62,7 @@ const title = computed(() => t('app.title'));
         <AppHeader />
         <main>
           <AppSocialMedias />
+          <SeoKit />
           <NuxtPage />
         </main>
         <AppFooter />

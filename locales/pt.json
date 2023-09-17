@@ -1,7 +1,9 @@
 {
   "app": {
     "name": "André Nunes",
-    "title": "Links"
+    "description": "Software Engineer",
+    "title": "Links",
+    "keywords": "Software Engineer, Software, Engineer, Developer, Web Developer, Web, Developer, Full Stack, Full, Stack, Full Stack Developer, Full Stack Engineer, Full Stack Web Developer, Full Stack Web Engineer, Full Stack Software Developer, Full Stack Software Engineer, Software Developer, Software Engineer, Web Developer, Web Engineer, Full Stack Developer, Full Stack Engineer, Full Stack Web Developer, Full Stack Web Engineer, Full Stack Software Developer, Full Stack Software Engineer, Software Developer, Software Engineer, Web Developer, Web Engineer, Full Stack Developer, Full Stack Engineer, Full Stack Web Developer, Full Stack Web Engineer, Full Stack Software Developer, Full Stack Software Engineer, Software Developer, Software Engineer, Web Developer, Web Engineer, Full Stack Developer, Full Stack Engineer, Full Stack Web Developer, Full Stack Web Engineer, Full Stack Software Developer, Full Stack Software Engineer"
   },
   "links": {
     "projects": {
