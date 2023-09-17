@@ -15,7 +15,9 @@
   },
   "themes": {
     "light": "Light",
-    "dark": "Dark"
+    "dark": "Dark",
+    "business": "Business",
+    "retro": "Retro"
   },
   "footer": {
     "copyright": "Copyright © 2023 - Feito com ❤️ por {name}"
