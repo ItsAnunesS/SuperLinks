@@ -6,7 +6,7 @@ export const useThemeState = () => {
   function changeTheme(newThemeID: string) {
     currentTheme.value = newThemeID;
 
-    if (cookieControl.cookiesEnabledIds?.value?.includes('theme')) ('theme').value = newThemeID;
+    if (cookieControl.cookiesEnabledIds?.value?.includes('theme')) useCookie('theme').value = newThemeID;
   }
 
   return {

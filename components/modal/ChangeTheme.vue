@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const { t } = useI18n();
 const useTheme = useThemeState();
+const currentTheme = useTheme.currentTheme;
 </script>
 
 <template>
@@ -15,7 +16,7 @@ const useTheme = useThemeState();
       <h3 class="font-bold text-lg pb-4">{{ t('modal.theme.title') }}</h3>
       <ul class="daisyui-menu w-full daisyui-rounded-box gap-2">
        <template v-for="theme in useTheme.availableThemes">
-         <li v-if="useTheme.currentTheme.value !== theme">
+         <li v-if="currentTheme !== theme">
           <button class="daisyui-btn text-base-content hover:text-accent pt-4" :data-theme="theme" @click.prevent="useTheme.changeTheme(theme)">
              {{ t(`themes.${theme}`) }}
              <div class="flex h-full flex-shrink-0 flex-wrap gap-1">
