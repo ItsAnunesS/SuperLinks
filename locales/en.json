@@ -17,6 +17,11 @@
     "light": "Light",
     "dark": "Dark",
     "business": "Business",
+    "cyberpunk": "Cyberpunk",
+    "coffee": "Coffee",
+    "forest": "Forest",
+    "aqua": "Aqua",
+    "dracula": "Dracula",
     "retro": "Retro"
   },
   "footer": {

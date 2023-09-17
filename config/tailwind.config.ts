@@ -8,7 +8,7 @@ export default <Partial<Config>>{
   ],
   daisyui: {
     themes: true,
-    darkTheme: "dark",
+    darkTheme: "business",
     base: true,
     styled: true,
     utils: true,

@@ -14,10 +14,15 @@
     }
   },
   "themes": {
-    "light": "Light",
-    "dark": "Dark",
-    "business": "Business",
-    "retro": "Retro"
+    "light": "Claro",
+    "dark": "Escuro",
+    "business": "Empresarial",
+    "cyberpunk": "Cyberpunk",
+    "coffee": "Café",
+    "forest": "Floresta",
+    "aqua": "Água",
+    "dracula": "Drácula",
+    "retro": "Retrô"
   },
   "footer": {
     "copyright": "Copyright © 2023 - Feito com ❤️ por {name}"
