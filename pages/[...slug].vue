@@ -39,21 +39,23 @@ const projects: LinksInterface[] = [
 const brands: LinksInterface[] = [
   {
     id: 'bitwo',
-    title: 'Bitwo',
+    title: 'Bitwo (WIP)',
     href: 'https://bitwo.io',
     target: '_blank',
   },
   {
     id: 'dynatrisoft',
-    title: 'Dynatrisoft Games',
+    title: 'Dynatrisoft Games (SOON)',
     href: 'https://dynatrisoft.com',
     target: '_blank',
+    disabled: true,
   },
   {
     id: 'quivoxmedia',
-    title: 'Quivox Media',
+    title: 'Quivox Media (SOON)',
     href: 'https://quivox.xyz',
     target: '_blank',
+    disabled: true,
   }
 ];
 </script>
