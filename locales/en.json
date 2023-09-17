@@ -28,6 +28,6 @@
     "wireframe": "Wireframe"
   },
   "footer": {
-    "copyright": "Copyright © 2023 - Made with ❤️ by {name}"
+    "copyright": "Copyright © {year} - Made with ❤️ by {name}"
   }
 }
