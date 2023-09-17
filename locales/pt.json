@@ -5,10 +5,16 @@
   },
   "links": {
     "projects": {
-      "title": "Projetos Pessoais"
+      "title": "Projetos Pessoais",
+      "website": "Meu Site (WIP)",
+      "blog": "Meu Blog (EM BREVE)",
+      "documentation": "Projects Docs (WIP)"
     },
     "brands": {
-      "title": "Empresas / Marcas"
+      "title": "Empresas / Marcas",
+      "bitwo": "Bitwo (WIP)",
+      "dynatrisoft": "DynatriSoft (EM BREVE)",
+      "quivox": "Quivox (EM BREVE)"
     },
     "general": {
       "calendly": "Agende uma chamada"

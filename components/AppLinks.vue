@@ -22,7 +22,7 @@ const { title, links } = toRefs(props);
       <template v-if="link.icon">
         <span class="h-6 w-6 absolute left-4" v-html="link.icon"></span>
       </template>
-      {{ link.title }}
+      {{ link.title.value }}
     </a>
   </div>
 </template>

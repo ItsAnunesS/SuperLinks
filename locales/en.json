@@ -8,10 +8,13 @@
       "title": "Projects",
       "website": "My Website (WIP)",
       "blog": "My Blog (SOON)",
-      "documentation": "My Docs (WIP)"
+      "documentation": "Projects Docs (WIP)"
     },
     "brands": {
-      "title": "Brands"
+      "title": "Brands",
+      "bitwo": "Bitwo (WIP)",
+      "dynatrisoft": "DynatriSoft (SOON)",
+      "quivox": "Quivox (SOON)"
     },
     "general": {
       "calendly": "Schedule a meeting"
