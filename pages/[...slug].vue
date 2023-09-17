@@ -79,15 +79,6 @@ useHeadSafe({
 });
 
 // TODO: Add integration with backend
-const general: LinksInterface[] = [
-  {
-    id: 'calendly',
-    title: computed(() => t('links.general.calendly')),
-    href: 'https://calendly.com/anuness',
-    target: '_blank',
-  },
-]
-
 const projects: LinksInterface[] = [
   {
     id: 'website',
@@ -139,7 +130,7 @@ const brands: LinksInterface[] = [
 
 <template>
   <div>
-    <AppLinks :links="general" />
+    <ModalCalendly />
     <AppLinks :title="t('links.projects.title')" :links="projects" />
     <AppLinks :title="t('links.brands.title')" :links="brands" />
   </div>

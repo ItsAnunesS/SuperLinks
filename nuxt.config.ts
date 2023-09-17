@@ -26,11 +26,17 @@ export default defineNuxtConfig({
     'nuxt-seo-kit'
   ],
   modules: [
+    "nuxt-calendly",
     '@nuxtjs/tailwindcss',
     '@nuxtjs/device',
     '@dargmuesli/nuxt-cookie-control',
     '@nuxtjs/i18n',
   ],
+  calendly: {
+    isEnabled: true,
+    loadWidgetCSS: true,
+    loadWidgetCloseIconSvg: true
+  },
   devtools: { enabled: true },
   i18n: {
     defaultLocale: 'en',

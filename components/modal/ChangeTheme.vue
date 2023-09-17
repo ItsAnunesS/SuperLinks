@@ -8,7 +8,7 @@ const currentTheme = useTheme.currentTheme;
   <button class="daisyui-btn w-32 m:w-44" onclick="change_theme.showModal()">
     {{ t('modal.theme.button') }}
   </button>
-  <dialog id="change_theme" class="daisyui-modal daisyui-modal-bottom sm:daisyui-modal-middle">
+  <dialog id="change_theme" class="daisyui-modal daisyui-modal-bottom md:daisyui-modal-middle">
     <div class="daisyui-modal-box max-h-56 md:max-h-max overflow-hidden">
       <form method="dialog">
         <button class="mt-4 daisyui-btn daisyui-btn-sm daisyui-btn-circle daisyui-btn-ghost absolute right-2 top-2">✕</button>
