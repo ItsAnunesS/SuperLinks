@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { t, setLocale } = useI18n();
+const { t } = useI18n();
 const useLanguage = useLanguageState();
 const availableLocales = useLanguage.availableLocales;
 </script>
@@ -16,7 +16,7 @@ const availableLocales = useLanguage.availableLocales;
       <h3 class="font-bold text-lg pb-4">{{ t('modal.language.title') }}</h3>
       <ul class="daisyui-menu w-full daisyui-rounded-box">
         <li v-for="locale in availableLocales" :key="locale.code">
-          <button class="daisyui-btn daisyui-btn-outline pt-4" @click.prevent.stop="setLocale(locale.code)">
+          <button class="daisyui-btn daisyui-btn-outline pt-4" @click.prevent.stop="useLanguage.changeLanguage(locale.code)">
             {{ locale.name }}
           </button>
         </li>

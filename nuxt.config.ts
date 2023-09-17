@@ -73,11 +73,23 @@ export default defineNuxtConfig({
             en: 'This cookie stores general preferences.',
             pt: 'Este cookie armazena preferências gerais.'
           },
-          id: 'p',
+          id: 'preferences',
           name: {
             en: 'Preferences',
             pt: 'Preferências'
           },
+        },
+        {
+          description: {
+            en: 'This cookie stores the language preferences.',
+            pt: 'Este cookie armazena as preferências de idioma.'
+          },
+          id: 'i18n',
+          name: {
+            en: 'Language',
+            pt: 'Idioma'
+          },
+          targetCookieIds: ['anuness_i18n_redirected']
         }
       ],
       optional: [
@@ -92,18 +104,6 @@ export default defineNuxtConfig({
             pt: 'Tema'
           },
           targetCookieIds: ['theme']
-        },
-        {
-          description: {
-            en: 'This cookie stores the language preferences.',
-            pt: 'Este cookie armazena as preferências de idioma.'
-          },
-          id: 'i18n',
-          name: {
-            en: 'Language',
-            pt: 'Idioma'
-          },
-          targetCookieIds: ['anuness_i18n_redirected']
         }
       ],
     },
