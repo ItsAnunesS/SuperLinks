@@ -20,7 +20,7 @@ useSchemaOrg([
   defineWebPage(),
 ]);
 
-const getCookieLocale = () => {
+const getCookieLocale = computed(() => {
   const { locale } = useI18n();
 
   switch(locale.value) {
@@ -31,7 +31,7 @@ const getCookieLocale = () => {
     default:
       return 'en';
   }
-};
+});
 
 const head = useLocaleHead({
   addDirAttribute: true,
@@ -40,23 +40,6 @@ const head = useLocaleHead({
 });
 
 const title = computed(() => t('app.title'));
-
-const {
-  cookiesEnabledIds,
-} = useCookieControl();
-
-watch(
-  () => cookiesEnabledIds.value,
-  (current, previous) => {
-    if (
-      !previous?.includes('theme') &&
-      current?.includes('theme')
-    ) {
-      window.location.reload() // placeholder for your custom change handler
-    }
-  },
-  { deep: true },
-);
 </script>
 
 <template>
@@ -71,7 +54,7 @@ watch(
       </template>
     </Head>
     <Body class="min-h-screen max-w-screen over">
-      <CookieControl :locale="getCookieLocale()" />
+      <CookieControl :locale="getCookieLocale" />
       <div class="flex items-center flex-col mx-auto w-full justify-center mt-16 px-8 pb-10">
         <header class="flex items-center flex-col justify-center">
           <div class="daisyui-avatar daisyui-online">

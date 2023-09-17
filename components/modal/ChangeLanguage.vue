@@ -1,5 +1,8 @@
 <script setup lang="ts">
-const { t } = useI18n();
+const { t, setLocale } = useI18n();
+const useLanguage = useLanguageState();
+
+const availableLocales = useLanguage.availableLocales;
 </script>
 
 <template>
@@ -13,9 +16,11 @@ const { t } = useI18n();
       </form>
       <h3 class="font-bold text-lg pb-4">{{ t('modal.language.title') }}</h3>
       <ul class="daisyui-menu w-full daisyui-rounded-box">
-        <li><a>Item 1</a></li>
-        <li><a>Item 2</a></li>
-        <li><a>Item 3</a></li>
+        <li v-for="locale in availableLocales" :key="locale.code">
+          <a href="#" @click.prevent.stop="setLocale(locale.code)">
+            {{ locale.name }}
+          </a>
+        </li>
       </ul>
     </div>
     <form method="dialog" class="daisyui-modal-backdrop">

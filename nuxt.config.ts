@@ -2,7 +2,7 @@
 export default defineNuxtConfig({
   runtimeConfig: {
     public: {
-      SITE_URL: process.env.NUXT_PUBLIC_SITE_URL || 'https://links.anuness.dev'
+      SITE_URL: process.env.NUXT_PUBLIC_SITE_URL || 'https://links.anuness.dev/'
     }
   },
   app: {
@@ -46,12 +46,10 @@ export default defineNuxtConfig({
     defaultLocale: 'en',
     detectBrowserLanguage: {
       alwaysRedirect: false,
-      fallbackLocale: '',
+      fallbackLocale: 'en',
       redirectOn: 'root',
       useCookie: true,
       cookieCrossOrigin: true,
-      cookieDomain: 'anuness.dev',
-      cookieSecure: true,
       cookieKey: 'anuness_i18n_redirected'
     },
     strategy: 'no_prefix',
@@ -67,19 +65,18 @@ export default defineNuxtConfig({
     }
   },
   cookieControl: {
+    closeModalOnClickOutside: false,
     cookies: {
       necessary: [
         {
           description: {
-            en: 'This cookie stores preferences.'
+            en: 'This cookie stores general preferences.',
+            pt: 'Este cookie armazena preferências gerais.'
           },
           id: 'p',
           name: {
-            en: 'Preferences'
-          },
-          links: {
-            'https://example.com/privacy': 'Privacy Policy',
-            'https://example.com/terms': 'Terms of Service',
+            en: 'Preferences',
+            pt: 'Preferências'
           },
         }
       ],
@@ -95,8 +92,32 @@ export default defineNuxtConfig({
             pt: 'Tema'
           },
           targetCookieIds: ['theme']
+        },
+        {
+          description: {
+            en: 'This cookie stores the language preferences.',
+            pt: 'Este cookie armazena as preferências de idioma.'
+          },
+          id: 'i18n',
+          name: {
+            en: 'Language',
+            pt: 'Idioma'
+          },
+          targetCookieIds: ['anuness_i18n_redirected']
         }
       ],
+    },
+    cookieOptions: {
+      path: '/',
+    },
+    locales: ['en', 'pt'],
+    localeTexts: {
+      en: {
+        save: 'Remember',
+      },
+      pt: {
+        save: 'Lembrar',
+      },
     }
   },
   tailwindcss: {

@@ -3,8 +3,20 @@
     "name": "André Nunes",
     "title": "Links"
   },
-  "theme": "Tema",
-  "language": "Idioma",
+  "modal": {
+    "theme": {
+      "button": "Temas",
+      "title": "Selecione o seu tema"
+    },
+    "language": {
+      "button": "Idiomas",
+      "title": "Selecione o seu idioma"
+    }
+  },
+  "themes": {
+    "light": "Light",
+    "dark": "Dark"
+  },
   "footer": {
     "copyright": "Copyright © 2023 - Feito com ❤️ por {name}"
   }
