@@ -113,10 +113,10 @@ export default defineNuxtConfig({
     locales: ['en', 'pt'],
     localeTexts: {
       en: {
-        save: 'Remember',
+        save: 'Save',
       },
       pt: {
-        save: 'Lembrar',
+        save: 'Salvar',
       },
     }
   },
