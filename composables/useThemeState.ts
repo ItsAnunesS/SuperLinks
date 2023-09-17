@@ -1,7 +1,7 @@
 export const useThemeState = () => {
   const cookieControl = useCookieControl();
   const currentTheme = useState('theme', () => useCookie('theme').value ?? 'light');
-  const availableThemes = ['light', 'dark', 'business', 'cyberpunk', 'coffee', 'forest', 'aqua', 'dracula', 'retro'];
+  const availableThemes = ['light', 'dark', 'business', 'cyberpunk', 'coffee', 'forest', 'aqua', 'dracula', 'retro', 'synthwave', 'luxury', 'wireframe'];
 
   function changeTheme(newThemeID: string) {
     currentTheme.value = newThemeID;

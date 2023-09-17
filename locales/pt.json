@@ -22,7 +22,10 @@
     "forest": "Floresta",
     "aqua": "Água",
     "dracula": "Drácula",
-    "retro": "Retrô"
+    "retro": "Retrô",
+    "synthwave": "Synthwave",
+    "luxury": "Luxuoso",
+    "wireframe": "Wireframe"
   },
   "footer": {
     "copyright": "Copyright © 2023 - Feito com ❤️ por {name}"

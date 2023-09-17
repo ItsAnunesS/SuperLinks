@@ -14,7 +14,7 @@ const currentTheme = useTheme.currentTheme;
         <button class="mt-4 daisyui-btn daisyui-btn-sm daisyui-btn-circle daisyui-btn-ghost absolute right-2 top-2">✕</button>
       </form>
       <h3 class="font-bold text-lg pb-4">{{ t('modal.theme.title') }}</h3>
-      <ul class="daisyui-menu w-full daisyui-rounded-box gap-2">
+      <ul class="daisyui-menu w-full daisyui-rounded-box gap-2 overflow-auto">
        <template v-for="theme in useTheme.availableThemes">
          <li v-if="currentTheme !== theme">
           <button class="daisyui-btn text-base-content hover:text-accent pt-4" :data-theme="theme" @click.prevent="useTheme.changeTheme(theme)">
