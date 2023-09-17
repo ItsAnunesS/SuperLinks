@@ -5,6 +5,12 @@ export default defineNuxtConfig({
       SITE_URL: process.env.NUXT_PUBLIC_SITE_URL || 'https://links.anuness.dev/'
     }
   },
+  typescript: {
+    strict: true,
+    tsConfig: {
+      "include": ["types/*.d.ts", "types/**/*.d.ts", "types/**/**/*.d.ts"]
+    }
+  },
   app: {
     head: {
       charset: 'utf-8',
@@ -60,9 +66,6 @@ export default defineNuxtConfig({
       { file: 'en.json', code: 'en', iso: 'en-US', name: 'English' },
       { file: 'pt.json', code: 'pt', iso: 'pt-BR', name: 'Português' },
     ],
-    experimental: {
-      payloadExtraction: false
-    }
   },
   cookieControl: {
     closeModalOnClickOutside: false,

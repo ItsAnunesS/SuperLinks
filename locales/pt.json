@@ -3,6 +3,11 @@
     "name": "André Nunes",
     "title": "Links"
   },
+  "links": {
+    "website": "Projetos Pessoais",
+    "brands": "Empresas / Marcas",
+    "calendly": "Agende uma chamada"
+  },
   "modal": {
     "theme": {
       "button": "Temas",

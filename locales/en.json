@@ -3,6 +3,11 @@
     "name": "André Nunes",
     "title": "Links"
   },
+  "links": {
+    "website": "Projects",
+    "brands": "Brands",
+    "calendly": "Schedule a meeting"
+  },
   "modal": {
     "theme": {
       "button": "Theme",
