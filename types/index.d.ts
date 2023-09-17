@@ -5,6 +5,7 @@ declare global {
     href: string
     target?: '_blank' | '_self' | '_parent' | '_top'
     icon?: string
+    disabled?: boolean
   }
 }
 

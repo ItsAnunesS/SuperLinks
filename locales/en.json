@@ -4,9 +4,18 @@
     "title": "Links"
   },
   "links": {
-    "website": "Projects",
-    "brands": "Brands",
-    "calendly": "Schedule a meeting"
+    "projects": {
+      "title": "Projects",
+      "website": "My Website (WIP)",
+      "blog": "My Blog (SOON)",
+      "documentation": "My Docs (WIP)"
+    },
+    "brands": {
+      "title": "Brands"
+    },
+    "general": {
+      "calendly": "Schedule a meeting"
+    }
   },
   "modal": {
     "theme": {

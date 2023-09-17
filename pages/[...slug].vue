@@ -5,18 +5,34 @@ const { t } = useI18n();
 const general: LinksInterface[] = [
   {
     id: 'calendly',
-    title: t('links.calendly'),
+    title: t('links.general.calendly'),
     href: 'https://calendly.com/anuness',
     target: '_blank',
   },
 ]
 
-const links: LinksInterface[] = [
+const projects: LinksInterface[] = [
   {
     id: 'website',
-    title: 'My Website',
+    title: t('links.projects.website'),
     href: 'https://anuness.dev',
     target: '_blank',
+    icon: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>',
+    disabled: true,
+  },
+  {
+    id: 'blog',
+    title: t('links.projects.blog'),
+    href: 'https://blog.anuness.dev',
+    target: '_blank',
+    disabled: true,
+  },
+  {
+    id: 'documentation',
+    title: t('links.projects.documentation'),
+    href: 'https://docs.anuness.dev',
+    target: '_blank',
+    disabled: true,
   }
 ];
 
@@ -45,7 +61,7 @@ const brands: LinksInterface[] = [
 <template>
   <div>
     <AppLinks :links="general" />
-    <AppLinks :title="t('links.website')" :links="links" />
-    <AppLinks :title="t('links.brands')" :links="brands" />
+    <AppLinks :title="t('links.projects.title')" :links="projects" />
+    <AppLinks :title="t('links.brands.title')" :links="brands" />
   </div>
 </template>

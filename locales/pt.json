@@ -4,9 +4,15 @@
     "title": "Links"
   },
   "links": {
-    "website": "Projetos Pessoais",
-    "brands": "Empresas / Marcas",
-    "calendly": "Agende uma chamada"
+    "projects": {
+      "title": "Projetos Pessoais"
+    },
+    "brands": {
+      "title": "Empresas / Marcas"
+    },
+    "general": {
+      "calendly": "Agende uma chamada"
+    }
   },
   "modal": {
     "theme": {
