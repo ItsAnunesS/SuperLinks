@@ -1,5 +1,11 @@
 {
-  "system": {
+  "app": {
+    "name": "André Nunes",
     "title": "Links"
+  },
+  "theme": "Tema",
+  "language": "Idioma",
+  "footer": {
+    "copyright": "Copyright © 2023 - Feito com ❤️ por {name}"
   }
 }

@@ -38,6 +38,7 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/device',
+    '@dargmuesli/nuxt-cookie-control',
     '@nuxtjs/i18n',
   ],
   devtools: { enabled: true },
@@ -62,6 +63,40 @@ export default defineNuxtConfig({
       { file: 'pt.json', code: 'pt', iso: 'pt-BR', name: 'Português' },
     ],
     experimental: {
+      payloadExtraction: false
+    }
+  },
+  cookieControl: {
+    cookies: {
+      necessary: [
+        {
+          description: {
+            en: 'This cookie stores preferences.'
+          },
+          id: 'p',
+          name: {
+            en: 'Preferences'
+          },
+          links: {
+            'https://example.com/privacy': 'Privacy Policy',
+            'https://example.com/terms': 'Terms of Service',
+          },
+        }
+      ],
+      optional: [
+        {
+          description: {
+            en: 'This cookie stores the theme preferences.',
+            pt: 'Este cookie armazena as preferências de tema.'
+          },
+          id: 'theme',
+          name: {
+            en: 'Theme',
+            pt: 'Tema'
+          },
+          targetCookieIds: ['theme']
+        }
+      ],
     }
   },
   tailwindcss: {

@@ -1,10 +1,19 @@
 <script setup lang="ts">
+const { t } = useI18n();
+
 useSchemaOrg([
   definePerson({
-    name: 'André Nunes',
-    image: '/me.png',
+    name: t('app.name'),
+    image: '/favicon/favicon-32x32.png',
     sameAs: [
-      'https://github.com/harlan-zw',
+      'https://github.com/ItsAnunesS',
+      'https://anuness.dev',
+      'https://www.anuness.dev',
+      'https://www.linkedin.com/in/itsanuness',
+      'https://www.twitter.com/ItsAnunesS',
+      'https://www.instagram.com/itsanuness',
+      'https://www.youtube.com/@itsanuness',
+      'https://www.youtube.com/@ItsAnunesSXP',
     ]
   }),
   defineWebSite({}),
@@ -22,21 +31,36 @@ const getCookieLocale = () => {
     default:
       return 'en';
   }
-}
-
-const { t } = useI18n()
+};
 
 const head = useLocaleHead({
   addDirAttribute: true,
   identifierAttribute: 'id',
   addSeoAttributes: true
-})
+});
 
-const title = computed(() => t('system.title'))
+const title = computed(() => t('app.title'));
+
+const {
+  cookiesEnabledIds,
+} = useCookieControl();
+
+watch(
+  () => cookiesEnabledIds.value,
+  (current, previous) => {
+    if (
+      !previous?.includes('theme') &&
+      current?.includes('theme')
+    ) {
+      window.location.reload() // placeholder for your custom change handler
+    }
+  },
+  { deep: true },
+);
 </script>
 
 <template>
-  <Html :data-theme="'business'" :lang="head.htmlAttrs?.lang" :dir="head.htmlAttrs?.dir">
+  <Html :data-theme="useThemeState().currentTheme" :lang="head.htmlAttrs?.lang" :dir="head.htmlAttrs?.dir">
     <Head>
       <Title>{{ title }}</Title>
       <template v-for="link in head.link" :key="link.id">
@@ -47,7 +71,7 @@ const title = computed(() => t('system.title'))
       </template>
     </Head>
     <Body class="min-h-screen max-w-screen over">
-      <CookieControl :locale="getCookieLocale" />
+      <CookieControl :locale="getCookieLocale()" />
       <div class="flex items-center flex-col mx-auto w-full justify-center mt-16 px-8 pb-10">
         <header class="flex items-center flex-col justify-center">
           <div class="daisyui-avatar daisyui-online">
@@ -55,7 +79,7 @@ const title = computed(() => t('system.title'))
               <img src="https://avatars.githubusercontent.com/u/29176709?v=4" />
             </div>
           </div>
-          <h1 class="font-bold mt-4 mb-8 text-xl text-white">André Nunes</h1>
+          <h1 class="font-bold mt-4 mb-8 text-xl text-white">{{ t('app.name') }}</h1>
           <div class="flex flex-row justify-center gap-2 mb-5">
             <ModalChangeTheme />
             <ModalChangeLanguage />
@@ -105,7 +129,7 @@ const title = computed(() => t('system.title'))
         </main>
         <footer class="daisyui-footer items-center justify-center daisyui-footer-center p-4 text-base-content">
           <aside>
-            <p>Copyright © 2023 - All right reserved by André Nunes</p>
+            <p>{{ t('footer.copyright', { name: t('app.name') }) }}</p>
           </aside>
         </footer>
       </div>
