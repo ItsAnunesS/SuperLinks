@@ -9,12 +9,12 @@ const currentTheme = useTheme.currentTheme;
     {{ t('modal.theme.button') }}
   </button>
   <dialog id="change_theme" class="daisyui-modal daisyui-modal-bottom md:daisyui-modal-middle">
-    <div class="daisyui-modal-box max-h-56 md:max-h-max overflow-hidden">
+    <div class="daisyui-modal-box overflow-auto max-h-max md:overflow-hidden">
       <form method="dialog">
         <button class="mt-4 daisyui-btn daisyui-btn-sm daisyui-btn-circle daisyui-btn-ghost absolute right-2 top-2">✕</button>
       </form>
       <h3 class="font-bold text-lg pb-4">{{ t('modal.theme.title') }}</h3>
-      <div class="overflow-auto max-h-80">
+      <div class="overflow-scroll md:overflow-auto max-h-80">
         <ul class="daisyui-menu w-full daisyui-rounded-box gap-2">
          <template v-for="theme in useTheme.availableThemes">
            <li v-if="currentTheme !== theme">
