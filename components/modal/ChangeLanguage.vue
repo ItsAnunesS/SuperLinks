@@ -1,7 +1,15 @@
 <script setup lang="ts">
 const { t } = useI18n();
+const { isMobileOrTablet } = useDevice();
 const useLanguage = useLanguageState();
 const availableLocales = useLanguage.availableLocales;
+const changeLanguage = (languageID: string) => {
+  useLanguage.changeLanguage(languageID);
+  if (isMobileOrTablet) {
+    const close = document.getElementById('change_language_close');
+    close?.click();
+  }
+};
 </script>
 
 <template>
@@ -16,14 +24,14 @@ const availableLocales = useLanguage.availableLocales;
       <h3 class="font-bold text-lg pb-4">{{ t('modal.language.title') }}</h3>
       <ul class="daisyui-menu w-full daisyui-rounded-box">
         <li v-for="locale in availableLocales" :key="locale.code">
-          <button class="daisyui-btn daisyui-btn-outline pt-4" @click.prevent.stop="useLanguage.changeLanguage(locale.code)">
+          <button class="daisyui-btn daisyui-btn-outline pt-4" @click.prevent.stop="changeLanguage(locale.code)">
             {{ locale.name }}
           </button>
         </li>
       </ul>
     </div>
     <form method="dialog" class="daisyui-modal-backdrop">
-      <button>close</button>
+      <button id="change_language_close">close</button>
     </form>
   </dialog>
 </template>

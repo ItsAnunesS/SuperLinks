@@ -1,7 +1,15 @@
 <script setup lang="ts">
 const { t } = useI18n();
+const { isMobileOrTablet } = useDevice();
 const useTheme = useThemeState();
 const currentTheme = useTheme.currentTheme;
+const changeTheme = (theme: string) => {
+  useTheme.changeTheme(theme);
+  if (isMobileOrTablet) {
+    const close = document.getElementById('change_theme_close');
+    close?.click();
+  }
+};
 </script>
 
 <template>
@@ -18,7 +26,7 @@ const currentTheme = useTheme.currentTheme;
         <ul class="daisyui-menu w-full daisyui-rounded-box gap-2">
          <template v-for="theme in useTheme.availableThemes">
            <li v-if="currentTheme !== theme">
-            <button class="daisyui-btn text-base-content hover:text-accent pt-4" :data-theme="theme" @click.prevent="useTheme.changeTheme(theme)">
+            <button class="daisyui-btn text-base-content hover:text-accent pt-4" :data-theme="theme" @click.prevent="changeTheme(theme)">
                {{ t(`themes.${theme}`) }}
                <div class="flex h-full flex-shrink-0 flex-wrap gap-1">
                  <div class="bg-primary w-2 rounded"></div>
@@ -33,7 +41,7 @@ const currentTheme = useTheme.currentTheme;
       </div>
     </div>
     <form method="dialog" class="daisyui-modal-backdrop">
-      <button>close</button>
+      <button id="change_theme_close">close</button>
     </form>
   </dialog>
 </template>
