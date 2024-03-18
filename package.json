@@ -17,12 +17,13 @@
   "devDependencies": {
     "@dargmuesli/nuxt-cookie-control": "^7.4.0",
     "@formkit/auto-animate": "^0.8.1",
-    "@nuxt/ui": "^2.14.2",
     "@nuxtjs/google-fonts": "^3.2.0",
+    "@nuxtjs/i18n": "^8.2.0",
     "@nuxtjs/seo": "^2.0.0-rc.9",
     "@nuxtjs/tailwindcss": "^6.11.4",
+    "@types/node": "^20.11.28",
     "@vant/nuxt": "^1.0.4",
     "@vercel/analytics": "^1.2.2",
-    "vant": "^4.8.6"
+    "daisyui": "latest"
   }
 }

@@ -1,0 +1,59 @@
+{
+  "app": {
+    "name": "André Nunes",
+    "description": "Software Engineer",
+    "title": "Links",
+    "keywords": "Software Engineer, Software, Engineer, Developer, Web Developer, Web, Developer, Full Stack, Full, Stack, Full Stack Developer, Full Stack Engineer, Full Stack Web Developer, Full Stack Web Engineer, Full Stack Software Developer, Full Stack Software Engineer, Software Developer, Software Engineer, Web Developer, Web Engineer, Full Stack Developer, Full Stack Engineer, Full Stack Web Developer, Full Stack Web Engineer, Full Stack Software Developer, Full Stack Software Engineer, Software Developer, Software Engineer, Web Developer, Web Engineer, Full Stack Developer, Full Stack Engineer, Full Stack Web Developer, Full Stack Web Engineer, Full Stack Software Developer, Full Stack Software Engineer, Software Developer, Software Engineer, Web Developer, Web Engineer, Full Stack Developer, Full Stack Engineer, Full Stack Web Developer, Full Stack Web Engineer, Full Stack Software Developer, Full Stack Software Engineer"
+  },
+  "links": {
+    "projects": {
+      "title": "Projects",
+      "website": "My Website (WIP)",
+      "blog": "My Blog (SOON)",
+      "documentation": "Projects Docs (WIP)"
+    },
+    "brands": {
+      "title": "Brands",
+      "bitwo": "Bitwo (WIP)",
+      "dynatrisoft": "DynatriSoft (SOON)",
+      "quivox": "Quivox (SOON)"
+    },
+    "general": {
+      "calendly": "Schedule a meeting"
+    }
+  },
+  "modal": {
+    "theme": {
+      "button": "Theme",
+      "title": "Choose your theme"
+    },
+    "language": {
+      "button": "Language",
+      "title": "Select your language"
+    },
+    "credits": {
+      "title": "Open Source Credits",
+    }
+  },
+  "themes": {
+    "light": "Light",
+    "dark": "Dark",
+    "business": "Business",
+    "cyberpunk": "Cyberpunk",
+    "coffee": "Coffee",
+    "forest": "Forest",
+    "aqua": "Aqua",
+    "dracula": "Dracula",
+    "retro": "Retro",
+    "synthwave": "Synthwave",
+    "luxury": "Luxury",
+    "wireframe": "Wireframe"
+  },
+  "footer": {
+    "credits": {
+      "title": "Open Source Credits",
+      "tooltip": "Click to see the credits for the open source projects used in this website"
+    },
+    "copyright": "Copyright © {year} - Made with ❤️ by {name}"
+  }
+}
