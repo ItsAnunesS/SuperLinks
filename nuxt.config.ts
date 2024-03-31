@@ -16,7 +16,7 @@ export default defineNuxtConfig({
   googleFonts: {
   },
   site: {
-    url: 'https://links.anuness.dev',
+    url: 'https://links.anuness.dev/',
   },
   i18n: {
     defaultLocale: 'en',
