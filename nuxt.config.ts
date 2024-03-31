@@ -10,7 +10,7 @@ export default defineNuxtConfig({
     '@nuxtjs/i18n',
   ],
   tailwindcss: {
-    configPath: '~/config/tailwind.config',
+    configPath: '~/config/tailwind.config.ts',
     viewer: true,
   },
   googleFonts: {
